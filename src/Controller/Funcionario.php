@@ -8,15 +8,28 @@
 
 namespace src\Controller;
 
+use src\Model\Funcionario as FuncionarioModel;
+
 class Funcionario
 {
+    private $funcionarioModel;
+
     public function __construct()
     {
+        $this->funcionarioModel = new FuncionarioModel();
     }
 
     public function listar()
     {
+        try{
+            $funcionarios = $this->funcionarioModel->listar();
 
+            return $funcionarios;
+
+        }catch (\Exception $e){
+            $msg = $e->getMessage();
+            throw new \Exception($msg);
+        }
     }
 
 }

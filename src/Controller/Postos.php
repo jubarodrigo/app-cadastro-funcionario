@@ -1,32 +1,34 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: rodrigo
+ * User: juba
  * Date: 15/02/19
- * Time: 11:40
+ * Time: 23:37
  */
 
 namespace src\Controller;
 
-use src\Model\Funcionario as FuncionarioModel;
+use src\Model\Postos as PostosModel;
+
 
 /**
- * Class Funcionario
+ * Class Postos
  * @package src\Controller
  */
-class Funcionario
+class Postos
 {
+
     /**
-     * @var FuncionarioModel
+     * @var PostosModel
      */
-    private $funcionarioModel;
+    private $postoModel;
 
     /**
      * Funcionario constructor.
      */
     public function __construct()
     {
-        $this->funcionarioModel = new FuncionarioModel();
+        $this->postoModel = new PostosModel();
     }
 
     /**
@@ -36,9 +38,9 @@ class Funcionario
     public function listar()
     {
         try{
-            $funcionarios = $this->funcionarioModel->listar();
+            $postos = $this->postoModel->listar();
 
-            return $funcionarios;
+            return $postos;
 
         }catch (\Exception $e){
             $msg = $e->getMessage();
@@ -65,12 +67,12 @@ class Funcionario
             if (!isset($_POST['telefone']))
                 throw new \Exception("Telefone Obrigatório");
 
-            $this->funcionarioModel->setNome($_POST['nome']);
-            $this->funcionarioModel->setDataNascimento($_POST['data_nascimento']);
-            $this->funcionarioModel->setCidade($_POST['cidade']);
-            $this->funcionarioModel->setTelefone($_POST['telefone']);
+            $this->postoModel->setNome($_POST['nome']);
+            $this->postoModel->setDataNascimento($_POST['data_nascimento']);
+            $this->postoModel->setCidade($_POST['cidade']);
+            $this->postoModel->setTelefone($_POST['telefone']);
 
-            $response = $this->funcionarioModel->salvar();
+            $response = $this->postoModel->salvar();
 
             return $response;
 
@@ -79,5 +81,5 @@ class Funcionario
             throw new \Exception($msg);
         }
     }
-
+    
 }

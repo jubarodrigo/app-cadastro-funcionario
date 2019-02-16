@@ -8,8 +8,12 @@
 
 namespace src\Model;
 
-use src\Config\Database as DB;
+use src\Config\Conn as DB;
 
+/**
+ * Class Funcionario
+ * @package src\Model
+ */
 class Funcionario
 {
     /**
@@ -33,17 +37,38 @@ class Funcionario
      */
     private $db;
 
+    /**
+     * Funcionario constructor.
+     */
     public function __construct()
     {
-        $this->db = new DB();
+        $this->db = DB::getInstance();
     }
 
+    /**
+     * @return array
+     */
     public function listar(){
-        $sql = "SELECT * FROM funcionarios";
-        $response = $this->prepare($sql);
-        $response->setFetchMode(\PDO::FETCH_ASSOC);
+
+        $sql = $this->db->query("SELECT * FROM funcionarios");
+        $response = $sql->fetchAll(\PDO::FETCH_ASSOC);
 
         return $response;
+    }
+
+    /**
+     * @return bool
+     */
+    public function salvar(){
+        $sql = "INSERT INTO funcionarios (nome,data_nascimento,cidade,telefone) values (:nome,:data_nascimento,:cidade,:telefone)";
+
+        $response = $this->db->prepare($sql);
+        $response->bindParam(':nome',$this->nome);
+        $response->bindParam(':data_nascimento',$this->dataNascimento);
+        $response->bindParam(':cidade',$this->cidade);
+        $response->bindParam(':telefone',$this->telefone);
+
+        return $response->execute();
     }
 
     /**

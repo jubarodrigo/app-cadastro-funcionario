@@ -81,5 +81,5 @@ class Postos
             throw new \Exception($msg);
         }
     }
-    
+
 }

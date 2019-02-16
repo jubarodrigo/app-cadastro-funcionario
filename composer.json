@@ -1,0 +1,10 @@
+{
+    "name": "juba/app-cadastro-funcionario",
+    "authors": [
+        {
+            "name": "Juba",
+            "email": "rgjuba@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -21,5 +21,9 @@ Render de Views via Controller e definição de layout padrão de frontend
 
 Login com controle de Token
 
+## Etapa 6
+
+Documentação da aplicação com Swagger
+
 
 

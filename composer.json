@@ -11,5 +11,7 @@
             "App\\": "src"
         }
     },
-    "require": {}
+    "require": {
+        "apache/log4php": "2.3.0"
+    }
 }

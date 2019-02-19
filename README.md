@@ -3,7 +3,7 @@ CRUD sem utilização de Framework para estudo de caso
 
 ## Etapa 1
 
-Estruturação MVC da aplicação, mapemento das Models e Scripts para criação do Banco.
+Estruturação MVC da aplicação, mapeamento das Models e Scripts para criação do Banco.
 
 ## Etapa 2
 

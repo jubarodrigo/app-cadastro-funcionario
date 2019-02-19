@@ -13,7 +13,7 @@ class View
     public static function render(
         $data,
         $arquivo,
-        $cabecalho = 'src/View/container/top.php')
+        $cabecalho = 'src/view/container/top.php')
     {
         require $cabecalho;
         require $arquivo;

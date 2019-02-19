@@ -43,7 +43,7 @@ $(function () {
     assert.strictEqual($carousel[0], $el[0], 'collection contains element')
   })
 
-  QUnit.test('should type check config options', function (assert) {
+  QUnit.test('should type check Config options', function (assert) {
     assert.expect(2)
 
     var message

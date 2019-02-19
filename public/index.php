@@ -1,6 +1,6 @@
 <div class="container">
     <?php
-    require_once 'autoloader.php';
+    require_once '../autoloader.php';
     session_start();
 
     use src\Controller\Funcionario as Funcionario;
@@ -13,15 +13,15 @@
     }
     switch ($_GET['route']) {
         case 'funcionarios/listar':
-            View::render(null,"./src/View/funcionarios/lista.php");
+            View::render(null,"../src/view/funcionarios/lista.php");
             break;
 
         case 'funcionarios/cadastro':
-            View::render(null,"./src/View/funcionarios/cadastro.php");
+            View::render(null,"../src/view/funcionarios/cadastro.php");
             break;
 
         case 'funcionarios/create':
-            View::render($funcionario->salvar(),"./src/View/funcionarios/cadastro.php");
+            View::render($funcionario->salvar(),"../src/view/funcionarios/cadastro.php");
             break;
     }
     ?>
@@ -37,5 +37,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<script src="./public/assets/components/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="assets/components/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 </html>

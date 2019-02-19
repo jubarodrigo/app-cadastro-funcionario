@@ -1,7 +1,7 @@
 <configuration xmlns:log4php="http://logging.apache.org/log4php/">
 
     <appender name="default" class="LoggerAppenderDailyFile">
-        <param name="file" value="/logs/%s.log" />
+        <param name="file" value="../../logs/%s.log" />
         <param name="datePattern" value="Ymd" />
         <layout class="LoggerLayoutPattern">
             <param name="ConversionPattern" value="%d{Y-m-d H:i:s} [%p] %c: %m (at %F line %L)%n%ex"/>

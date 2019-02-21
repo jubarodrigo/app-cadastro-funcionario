@@ -26,7 +26,7 @@ $(function () {
     $.escapeSelector = tmpEscapeSelector
   })
 
-  QUnit.test('Util.typeCheckConfig should thrown an error when a bad Config is passed', function (assert) {
+  QUnit.test('Util.typeCheckConfig should thrown an error when a bad config is passed', function (assert) {
     assert.expect(1)
     var namePlugin = 'collapse'
     var defaultType = {

@@ -6,7 +6,7 @@
  * Time: 20:34
  */
 
-namespace src\Config;
+namespace config;
 
 
 class Conn

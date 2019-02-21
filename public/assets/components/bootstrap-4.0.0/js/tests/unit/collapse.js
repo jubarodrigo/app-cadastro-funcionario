@@ -809,7 +809,7 @@ $(function () {
     $target.trigger($.Event('click'))
   })
 
-  QUnit.test('should allow jquery object in parent Config', function (assert) {
+  QUnit.test('should allow jquery object in parent config', function (assert) {
     assert.expect(1)
     var html =
     '<div class="my-collapse">' +
@@ -830,7 +830,7 @@ $(function () {
     }
   })
 
-  QUnit.test('should allow DOM object in parent Config', function (assert) {
+  QUnit.test('should allow DOM object in parent config', function (assert) {
     assert.expect(1)
     var html =
     '<div class="my-collapse">' +

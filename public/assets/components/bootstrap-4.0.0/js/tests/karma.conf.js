@@ -25,7 +25,7 @@ module.exports = (config) => {
     reporters: ['dots'],
     port: 9876,
     colors: true,
-    // possible values: Config.LOG_DISABLE || Config.LOG_ERROR || Config.LOG_WARN || Config.LOG_INFO || Config.LOG_DEBUG
+    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_ERROR || config.LOG_WARN,
     autoWatch: false,
     customLaunchers: {

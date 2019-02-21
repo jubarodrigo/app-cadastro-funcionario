@@ -1,6 +1,6 @@
 <div class="container">
     <?php
-    require_once '../autoloader.php';
+    require_once '../vendor/autoload.php';
     session_start();
 
     use src\Controller\Funcionario as Funcionario;
